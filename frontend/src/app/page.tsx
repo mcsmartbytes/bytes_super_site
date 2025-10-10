@@ -162,7 +162,7 @@ export default function Home() {
 
             <ul className="hidden md:flex items-center gap-8">
               <li><Link href="#services" className="text-gray-700 hover:text-orange-700 transition font-medium">Services</Link></li>
-              <li><Link href="#portfolio" className="text-gray-700 hover:text-orange-700 transition font-medium">Portfolio</Link></li>
+              <li><Link href="/services" className="text-gray-700 hover:text-orange-700 transition font-medium">Pricing</Link></li>
               <li><Link href="/blog" className="text-gray-700 hover:text-orange-700 transition font-medium">Blog</Link></li>
               <li><Link href="#about" className="text-gray-700 hover:text-orange-700 transition font-medium">About</Link></li>
               <li><Link href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-semibold">Get Started</Link></li>
@@ -176,7 +176,7 @@ export default function Home() {
           {mobileMenuOpen && (
             <ul className="md:hidden mt-4 flex flex-col gap-4 pb-4">
               <li><Link href="#services" className="block text-gray-700 hover:text-orange-700 transition">Services</Link></li>
-              <li><Link href="#portfolio" className="block text-gray-700 hover:text-orange-700 transition">Portfolio</Link></li>
+              <li><Link href="/services" className="block text-gray-700 hover:text-orange-700 transition">Pricing</Link></li>
               <li><Link href="/blog" className="block text-gray-700 hover:text-orange-700 transition">Blog</Link></li>
               <li><Link href="#about" className="block text-gray-700 hover:text-orange-700 transition">About</Link></li>
               <li><Link href="#contact" className="block px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl text-center">Get Started</Link></li>
