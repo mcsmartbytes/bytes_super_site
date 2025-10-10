@@ -35,11 +35,21 @@ export default function TodosPage() {
   const [filter, setFilter] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('all');
 
   // Form state
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    title: string;
+    notes: string;
+    priority: 'low' | 'medium' | 'high' | 'urgent';
+    status: 'pending' | 'in_progress' | 'completed' | 'cancelled';
+    due_date: string;
+    reminder_date: string;
+    customer_id: string;
+    customer_name: string;
+    customer_email: string;
+  }>({
     title: '',
     notes: '',
-    priority: 'medium' as const,
-    status: 'pending' as const,
+    priority: 'medium',
+    status: 'pending',
     due_date: '',
     reminder_date: '',
     customer_id: '',
