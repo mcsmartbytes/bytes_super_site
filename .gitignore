@@ -1,0 +1,19 @@
+# Screenshots and temporary images
+Screenshot*.png
+*.jpg:Zone.Identifier
+*.png:Zone.Identifier
+
+# Working files
+fulllogo.jpg
+fulllogo_nobuffer.jpg
+fulllogo_transparent_nobuffer.png
+paolo-milesi-zqVCwgeSYXc-unsplash.jpg
+orginial/
+
+# Test files
+frontend/test-supabase.js
+
+# Environment files
+.env
+.env.local
+.env*.local
