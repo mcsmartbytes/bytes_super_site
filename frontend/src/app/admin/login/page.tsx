@@ -69,7 +69,7 @@ export default function AdminLogin() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-600 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-800 focus:ring-2 focus:ring-blue-100 outline-none transition"
                 placeholder="admin@mcsmartbytes.com"
                 disabled={loading}
               />
@@ -84,7 +84,7 @@ export default function AdminLogin() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-600 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-800 focus:ring-2 focus:ring-blue-100 outline-none transition"
                 placeholder="Enter your password"
                 disabled={loading}
               />
@@ -93,7 +93,7 @@ export default function AdminLogin() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-4 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
@@ -110,7 +110,7 @@ export default function AdminLogin() {
           </form>
 
           <div className="mt-6 text-center">
-            <Link href="/" className="text-sm text-gray-600 hover:text-orange-600 transition">
+            <Link href="/" className="text-sm text-gray-600 hover:text-blue-800 transition">
               <i className="fas fa-arrow-left mr-2"></i>
               Back to Website
             </Link>

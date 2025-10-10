@@ -161,25 +161,25 @@ export default function Home() {
             </div>
 
             <ul className="hidden md:flex items-center gap-8">
-              <li><Link href="#services" className="text-gray-700 hover:text-orange-600 transition font-medium">Services</Link></li>
-              <li><Link href="#portfolio" className="text-gray-700 hover:text-orange-600 transition font-medium">Portfolio</Link></li>
-              <li><Link href="#testimonials" className="text-gray-700 hover:text-orange-600 transition font-medium">Testimonials</Link></li>
-              <li><Link href="#about" className="text-gray-700 hover:text-orange-600 transition font-medium">About</Link></li>
-              <li><Link href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-semibold">Get Started</Link></li>
+              <li><Link href="#services" className="text-gray-700 hover:text-blue-800 transition font-medium">Services</Link></li>
+              <li><Link href="#portfolio" className="text-gray-700 hover:text-blue-800 transition font-medium">Portfolio</Link></li>
+              <li><Link href="#testimonials" className="text-gray-700 hover:text-blue-800 transition font-medium">Testimonials</Link></li>
+              <li><Link href="#about" className="text-gray-700 hover:text-blue-800 transition font-medium">About</Link></li>
+              <li><Link href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-semibold">Get Started</Link></li>
             </ul>
 
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-gray-700 hover:text-orange-600 transition">
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-gray-700 hover:text-blue-800 transition">
               <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
             </button>
           </div>
 
           {mobileMenuOpen && (
             <ul className="md:hidden mt-4 flex flex-col gap-4 pb-4">
-              <li><Link href="#services" className="block text-gray-700 hover:text-orange-600 transition">Services</Link></li>
-              <li><Link href="#portfolio" className="block text-gray-700 hover:text-orange-600 transition">Portfolio</Link></li>
-              <li><Link href="#testimonials" className="block text-gray-700 hover:text-orange-600 transition">Testimonials</Link></li>
-              <li><Link href="#about" className="block text-gray-700 hover:text-orange-600 transition">About</Link></li>
-              <li><Link href="#contact" className="block px-6 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl text-center">Get Started</Link></li>
+              <li><Link href="#services" className="block text-gray-700 hover:text-blue-800 transition">Services</Link></li>
+              <li><Link href="#portfolio" className="block text-gray-700 hover:text-blue-800 transition">Portfolio</Link></li>
+              <li><Link href="#testimonials" className="block text-gray-700 hover:text-blue-800 transition">Testimonials</Link></li>
+              <li><Link href="#about" className="block text-gray-700 hover:text-blue-800 transition">About</Link></li>
+              <li><Link href="#contact" className="block px-6 py-2.5 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl text-center">Get Started</Link></li>
             </ul>
           )}
         </nav>
@@ -187,7 +187,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 via-stone-800/90 to-neutral-900/90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-neutral-900/90 z-10"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920')] bg-cover bg-center"></div>
 
         <div className="relative z-20 container mx-auto px-6 py-32">
@@ -198,7 +198,7 @@ export default function Home() {
 
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
             <span className="text-slate-700">Transform Your Business with</span><br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Smart Automation</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-800">Smart Automation</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto">
@@ -207,21 +207,21 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-500">200+</div>
+              <div className="text-4xl font-bold text-blue-700">200+</div>
               <div className="text-gray-200 text-sm">Clients Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-500">$2M+</div>
+              <div className="text-4xl font-bold text-blue-700">$2M+</div>
               <div className="text-gray-200 text-sm">Client Savings</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-500">15+hrs</div>
+              <div className="text-4xl font-bold text-blue-700">15+hrs</div>
               <div className="text-gray-200 text-sm">Saved Per Week</div>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link href="#contact" className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold">
+            <Link href="#contact" className="px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl hover:shadow-2xl hover:shadow-blue-700/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold">
               Get Free Business Analysis <i className="fas fa-arrow-right ml-2"></i>
             </Link>
             <Link href="#portfolio" className="px-8 py-4 bg-white text-stone-700 border-2 border-white rounded-xl hover:bg-gray-100 transition text-lg font-semibold">
@@ -245,7 +245,7 @@ export default function Home() {
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">OUR SERVICES</span>
+            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">OUR SERVICES</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Services Designed to Save You Time & Money</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From bookkeeping to custom software, we provide solutions that actually work for small businesses
@@ -261,13 +261,13 @@ export default function Home() {
               >
                 <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${flippedCards.has(idx) ? 'rotate-y-180' : ''}`}>
                   {/* Front of card */}
-                  <div className={`absolute w-full h-full backface-hidden rounded-2xl border-2 ${service.premium ? 'border-orange-600' : 'border-gray-200'} bg-white p-8 shadow-lg`}>
+                  <div className={`absolute w-full h-full backface-hidden rounded-2xl border-2 ${service.premium ? 'border-blue-800' : 'border-gray-200'} bg-white p-8 shadow-lg`}>
                     {service.premium && (
-                      <span className="absolute -top-3 right-8 bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold">MOST POPULAR</span>
+                      <span className="absolute -top-3 right-8 bg-blue-800 text-white px-3 py-1 rounded-full text-xs font-bold">MOST POPULAR</span>
                     )}
 
                     <div className="flex items-center justify-center mb-6">
-                      <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white text-4xl shadow-lg">
+                      <div className="w-24 h-24 bg-gradient-to-br from-blue-700 to-blue-800 rounded-2xl flex items-center justify-center text-white text-4xl shadow-lg">
                         <i className={service.icon}></i>
                       </div>
                     </div>
@@ -281,24 +281,24 @@ export default function Home() {
                   </div>
 
                   {/* Back of card */}
-                  <div className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl border-2 ${service.premium ? 'border-orange-600' : 'border-gray-200'} bg-gradient-to-br from-orange-50 to-white p-8 shadow-lg`}>
+                  <div className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl border-2 ${service.premium ? 'border-blue-800' : 'border-gray-200'} bg-gradient-to-br from-blue-50 to-white p-8 shadow-lg`}>
                     <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">{service.title}</h3>
 
                     <ul className="space-y-3 mb-6">
                       {service.features.map((feature, fIdx) => (
                         <li key={fIdx} className="flex items-center text-gray-700">
-                          <i className="fas fa-check-circle text-orange-600 mr-3 text-lg"></i>
+                          <i className="fas fa-check-circle text-blue-800 mr-3 text-lg"></i>
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="bg-white rounded-xl p-4 mb-6 text-center border-2 border-orange-200">
-                      <div className="text-3xl font-bold text-orange-600 mb-1">{service.pricing}</div>
+                    <div className="bg-white rounded-xl p-4 mb-6 text-center border-2 border-blue-200">
+                      <div className="text-3xl font-bold text-blue-800 mb-1">{service.pricing}</div>
                       <div className="text-sm text-gray-600">{service.priceNote}</div>
                     </div>
 
-                    <Link href="#contact" className="block w-full py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                    <Link href="#contact" className="block w-full py-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white text-center rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all">
                       Get Started <i className="fas fa-arrow-right ml-2"></i>
                     </Link>
                   </div>
@@ -307,14 +307,14 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-amber-900 to-stone-800 rounded-2xl p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white text-center">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-5xl">
                 <i className="fas fa-shield-alt"></i>
               </div>
               <div className="text-left">
                 <h4 className="text-2xl font-bold mb-2">100% Satisfaction Guarantee</h4>
-                <p className="text-orange-100">Not happy with the work? Get a full refund within 30 days. No questions asked.</p>
+                <p className="text-blue-100">Not happy with the work? Get a full refund within 30 days. No questions asked.</p>
               </div>
             </div>
           </div>
@@ -340,7 +340,7 @@ export default function Home() {
       <section id="portfolio" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">SUCCESS STORIES</span>
+            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">SUCCESS STORIES</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Real Results for Real Businesses</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               See how we've helped businesses like yours save money and streamline operations
@@ -350,7 +350,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, idx) => (
               <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                <div className="relative h-48 bg-gradient-to-br from-orange-500 to-orange-600 overflow-hidden">
+                <div className="relative h-48 bg-gradient-to-br from-blue-700 to-blue-800 overflow-hidden">
                   <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex gap-8 text-white">
                       {item.stats.map((stat, sIdx) => (
@@ -368,7 +368,7 @@ export default function Home() {
                   <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
                   <div className="flex gap-2 flex-wrap">
                     {item.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="px-3 py-1 bg-orange-50 text-orange-700 text-xs rounded-full font-medium">
+                      <span key={tIdx} className="px-3 py-1 bg-blue-50 text-blue-900 text-xs rounded-full font-medium">
                         {tag}
                       </span>
                     ))}
@@ -384,7 +384,7 @@ export default function Home() {
       <section id="testimonials" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">TESTIMONIALS</span>
+            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">TESTIMONIALS</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Don't just take our word for it - hear from businesses we've helped
@@ -398,7 +398,7 @@ export default function Home() {
                   key={idx}
                   className={`${activeTestimonial === idx ? 'block' : 'hidden'}`}
                 >
-                  <div className="text-5xl text-orange-600 mb-6">
+                  <div className="text-5xl text-blue-800 mb-6">
                     <i className="fas fa-quote-left"></i>
                   </div>
 
@@ -409,9 +409,9 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
                       <h5 className="text-lg font-bold text-gray-900">{testimonial.author}</h5>
-                      <div className="text-orange-600 font-semibold">{testimonial.title}</div>
+                      <div className="text-blue-800 font-semibold">{testimonial.title}</div>
                       <div className="text-gray-600 text-sm">{testimonial.company}</div>
-                      <div className="text-orange-600 text-lg mt-2">
+                      <div className="text-blue-800 text-lg mt-2">
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -423,7 +423,7 @@ export default function Home() {
                     <div className="flex gap-6">
                       {testimonial.results.map((result, rIdx) => (
                         <div key={rIdx} className="text-center bg-white px-4 py-3 rounded-xl min-w-[120px]">
-                          <div className="text-2xl font-bold text-orange-600">{result.number}</div>
+                          <div className="text-2xl font-bold text-blue-800">{result.number}</div>
                           <div className="text-xs text-gray-600">{result.label}</div>
                         </div>
                       ))}
@@ -437,7 +437,7 @@ export default function Home() {
                   <button
                     key={idx}
                     onClick={() => setActiveTestimonial(idx)}
-                    className={`w-3 h-3 rounded-full transition-all ${activeTestimonial === idx ? 'bg-orange-600 w-8' : 'bg-gray-300'}`}
+                    className={`w-3 h-3 rounded-full transition-all ${activeTestimonial === idx ? 'bg-blue-800 w-8' : 'bg-gray-300'}`}
                   />
                 ))}
               </div>
@@ -450,15 +450,15 @@ export default function Home() {
       <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">ABOUT US</span>
+            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">ABOUT US</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About MC Smart Bytes</h2>
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-7 gap-8">
             <div className="md:col-span-2 lg:col-span-4">
-              <div className="bg-gradient-to-r from-amber-900 to-stone-800 rounded-2xl p-8 text-white mb-8">
+              <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white mb-8">
                 <h3 className="text-2xl font-bold mb-4">A Personal Approach to Business Solutions</h3>
-                <p className="text-orange-100 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed">
                   With over 20 years in bookkeeping and software development, I understand the challenges small businesses face.
                   Unlike large firms where you're just a number, you'll work directly with me on every project.
                   I take the time to understand your unique needs and deliver solutions that actually work for your business.
@@ -484,7 +484,7 @@ export default function Home() {
                   }
                 ].map((expertise, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-6">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 text-xl mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-800 text-xl mb-4">
                       <i className={expertise.icon}></i>
                     </div>
                     <h4 className="font-bold text-gray-900 mb-2">{expertise.title}</h4>
@@ -501,7 +501,7 @@ export default function Home() {
                   'Insured & Bonded'
                 ].map((credential, idx) => (
                   <span key={idx} className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-sm font-medium text-gray-700">
-                    <i className="fas fa-certificate text-orange-600"></i>
+                    <i className="fas fa-certificate text-blue-800"></i>
                     {credential}
                   </span>
                 ))}
@@ -517,7 +517,7 @@ export default function Home() {
                   { number: '24hr', label: 'Response Time', desc: 'Usually much faster' }
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 text-center">
-                    <div className="text-4xl font-bold text-orange-600 mb-2">{stat.number}</div>
+                    <div className="text-4xl font-bold text-blue-800 mb-2">{stat.number}</div>
                     <div className="font-bold text-gray-900 mb-1">{stat.label}</div>
                     <div className="text-sm text-gray-600">{stat.desc}</div>
                   </div>
@@ -532,7 +532,7 @@ export default function Home() {
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">GET IN TOUCH</span>
+            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">GET IN TOUCH</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Let's discuss how we can help streamline your business operations
@@ -563,8 +563,8 @@ export default function Home() {
                   subtext: '9 AM - 6 PM EST'
                 }
               ].map((contact, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 border-2 border-gray-200 text-center hover:border-orange-600 hover:shadow-lg transition-all">
-                  <div className="text-3xl text-orange-600 mb-3">
+                <div key={idx} className="bg-white rounded-xl p-6 border-2 border-gray-200 text-center hover:border-blue-800 hover:shadow-lg transition-all">
+                  <div className="text-3xl text-blue-800 mb-3">
                     <i className={contact.icon}></i>
                   </div>
                   <h4 className="font-bold text-gray-900 mb-1">{contact.title}</h4>
@@ -573,15 +573,15 @@ export default function Home() {
                 </div>
               ))}
 
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-6 text-white text-center">
+              <div className="bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl p-6 text-white text-center">
                 <h4 className="font-bold text-xl mb-2 flex items-center justify-center gap-2">
                   <i className="fas fa-clock"></i>
                   Limited Availability
                 </h4>
-                <p className="text-orange-100 text-sm mb-4">
+                <p className="text-blue-100 text-sm mb-4">
                   To ensure quality service, I limit new clients to 3-4 per month.
                 </p>
-                <Link href="#contact" className="inline-block px-6 py-2 bg-white text-orange-600 rounded-lg font-semibold hover:bg-orange-50 transition">
+                <Link href="#contact" className="inline-block px-6 py-2 bg-white text-blue-800 rounded-lg font-semibold hover:bg-blue-50 transition">
                   Reserve Your Spot <i className="fas fa-arrow-right ml-1"></i>
                 </Link>
               </div>
@@ -591,12 +591,12 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-amber-900 to-stone-800 text-white py-12">
+      <footer className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-12">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-1">
               <div className="text-2xl font-bold mb-4">MC Smart Bytes</div>
-              <p className="text-orange-100 text-sm mb-4">
+              <p className="text-blue-100 text-sm mb-4">
                 Professional business solutions for your success
               </p>
               <div className="flex gap-2 flex-wrap">
@@ -611,7 +611,7 @@ export default function Home() {
 
             <div>
               <h4 className="font-bold text-lg mb-4">Services</h4>
-              <ul className="space-y-2 text-orange-100 text-sm">
+              <ul className="space-y-2 text-blue-100 text-sm">
                 <li><Link href="#services" className="hover:text-white transition">Bookkeeping</Link></li>
                 <li><Link href="#services" className="hover:text-white transition">Excel Solutions</Link></li>
                 <li><Link href="#services" className="hover:text-white transition">Database Conversion</Link></li>
@@ -621,7 +621,7 @@ export default function Home() {
 
             <div>
               <h4 className="font-bold text-lg mb-4">Resources</h4>
-              <ul className="space-y-2 text-orange-100 text-sm">
+              <ul className="space-y-2 text-blue-100 text-sm">
                 <li><Link href="#portfolio" className="hover:text-white transition">Case Studies</Link></li>
                 <li><Link href="#testimonials" className="hover:text-white transition">Client Reviews</Link></li>
                 <li><Link href="#about" className="hover:text-white transition">About</Link></li>
@@ -630,7 +630,7 @@ export default function Home() {
 
             <div>
               <h4 className="font-bold text-lg mb-4">Get Started</h4>
-              <ul className="space-y-2 text-orange-100 text-sm">
+              <ul className="space-y-2 text-blue-100 text-sm">
                 <li><Link href="#contact" className="hover:text-white transition">Free Consultation</Link></li>
                 <li><Link href="#contact" className="hover:text-white transition">Contact Us</Link></li>
               </ul>
@@ -638,8 +638,8 @@ export default function Home() {
           </div>
 
           <div className="border-t border-orange-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-orange-100 text-sm">&copy; 2025 MC Smart Bytes. All rights reserved.</p>
-            <div className="flex gap-4 text-orange-100 text-sm">
+            <p className="text-blue-100 text-sm">&copy; 2025 MC Smart Bytes. All rights reserved.</p>
+            <div className="flex gap-4 text-blue-100 text-sm">
               <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
               <Link href="#" className="hover:text-white transition">Terms of Service</Link>
               <Link href="#contact" className="hover:text-white transition">Contact</Link>
