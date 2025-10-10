@@ -20,6 +20,19 @@ export default function BookingsPage() {
   const [filter, setFilter] = useState<'all' | 'pending' | 'confirmed' | 'completed' | 'cancelled'>('all');
   const [selectedBooking, setSelectedBooking] = useState<Booking | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showForm, setShowForm] = useState(false);
+  const [editingBooking, setEditingBooking] = useState<Booking | null>(null);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: 'Bookkeeping Services',
+    booking_date: '',
+    booking_time: '',
+    notes: '',
+    status: 'confirmed' as 'pending' | 'confirmed' | 'completed' | 'cancelled'
+  });
 
   useEffect(() => {
     fetchBookings();
@@ -40,6 +53,81 @@ export default function BookingsPage() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      if (editingBooking) {
+        // Update existing booking
+        const { error } = await supabase
+          .from('bookings')
+          .update({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || null,
+            service: formData.service,
+            booking_date: formData.booking_date,
+            booking_time: formData.booking_time,
+            notes: formData.notes || null,
+            status: formData.status
+          })
+          .eq('id', editingBooking.id);
+
+        if (error) throw error;
+      } else {
+        // Create new booking
+        const { error } = await supabase
+          .from('bookings')
+          .insert([{
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || null,
+            service: formData.service,
+            booking_date: formData.booking_date,
+            booking_time: formData.booking_time,
+            notes: formData.notes || null,
+            status: formData.status
+          }]);
+
+        if (error) throw error;
+      }
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: 'Bookkeeping Services',
+        booking_date: '',
+        booking_time: '',
+        notes: '',
+        status: 'confirmed'
+      });
+      setShowForm(false);
+      setEditingBooking(null);
+      fetchBookings();
+    } catch (error: any) {
+      console.error('Error saving booking:', error);
+      alert('Error saving booking: ' + (error.message || 'Unknown error'));
+    }
+  };
+
+  const handleEdit = (booking: Booking) => {
+    setEditingBooking(booking);
+    setFormData({
+      name: booking.name,
+      email: booking.email,
+      phone: booking.phone || '',
+      service: booking.service,
+      booking_date: booking.booking_date,
+      booking_time: booking.booking_time,
+      notes: booking.notes || '',
+      status: booking.status
+    });
+    setShowForm(true);
+    setSelectedBooking(null);
   };
 
   const updateStatus = async (id: string, status: 'pending' | 'confirmed' | 'completed' | 'cancelled') => {
@@ -111,14 +199,174 @@ export default function BookingsPage() {
           <h1 className="text-3xl font-bold text-gray-900">Bookings</h1>
           <p className="text-gray-600 mt-2">Manage consultation appointments</p>
         </div>
-        <button
-          onClick={fetchBookings}
-          className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-800 transition font-semibold"
-        >
-          <i className="fas fa-sync-alt mr-2"></i>
-          Refresh
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={() => {
+              setShowForm(!showForm);
+              setEditingBooking(null);
+              setSelectedBooking(null);
+              setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                service: 'Bookkeeping Services',
+                booking_date: '',
+                booking_time: '',
+                notes: '',
+                status: 'confirmed'
+              });
+            }}
+            className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-orange-800 transition font-semibold"
+          >
+            <i className={`fas fa-${showForm ? 'times' : 'plus'} mr-2`}></i>
+            {showForm ? 'Cancel' : 'New Booking'}
+          </button>
+          <button
+            onClick={fetchBookings}
+            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-semibold"
+          >
+            <i className="fas fa-sync-alt mr-2"></i>
+            Refresh
+          </button>
+        </div>
       </div>
+
+      {/* Booking Form */}
+      {showForm && (
+        <div className="bg-white rounded-xl p-6 border border-gray-200 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            {editingBooking ? 'Edit Booking' : 'Create New Booking'}
+          </h2>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Name *</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                  placeholder="John Smith"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Email *</label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                  placeholder="john@company.com"
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Phone</label>
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Service *</label>
+                <select
+                  required
+                  value={formData.service}
+                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                >
+                  <option>Bookkeeping Services</option>
+                  <option>Excel Solutions</option>
+                  <option>Database Conversion</option>
+                  <option>Web Design</option>
+                  <option>Custom Consulting</option>
+                  <option>General Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Date *</label>
+                <input
+                  type="date"
+                  required
+                  value={formData.booking_date}
+                  onChange={(e) => setFormData({ ...formData, booking_date: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Time *</label>
+                <input
+                  type="time"
+                  required
+                  value={formData.booking_time}
+                  onChange={(e) => setFormData({ ...formData, booking_time: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-700 mb-2">Status *</label>
+                <select
+                  required
+                  value={formData.status}
+                  onChange={(e) => setFormData({ ...formData, status: e.target.value as any })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition"
+                >
+                  <option value="pending">Pending</option>
+                  <option value="confirmed">Confirmed</option>
+                  <option value="completed">Completed</option>
+                  <option value="cancelled">Cancelled</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label className="block font-semibold text-gray-700 mb-2">Notes</label>
+              <textarea
+                rows={4}
+                value={formData.notes}
+                onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-orange-100 outline-none transition resize-none"
+                placeholder="Additional notes about this booking..."
+              />
+            </div>
+
+            <div className="flex gap-3">
+              <button
+                type="submit"
+                className="px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg hover:shadow-lg transition font-semibold"
+              >
+                <i className="fas fa-save mr-2"></i>
+                {editingBooking ? 'Update Booking' : 'Create Booking'}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowForm(false);
+                  setEditingBooking(null);
+                }}
+                className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-semibold"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
 
       {/* Filter Tabs */}
       <div className="mb-6 flex gap-2 bg-white p-2 rounded-lg border border-gray-200 inline-flex flex-wrap">
@@ -182,7 +430,10 @@ export default function BookingsPage() {
             {filteredBookings.map((booking) => (
               <div
                 key={booking.id}
-                onClick={() => setSelectedBooking(booking)}
+                onClick={() => {
+                  setSelectedBooking(booking);
+                  setShowForm(false);
+                }}
                 className={`bg-white rounded-lg p-4 border-2 cursor-pointer transition-all hover:shadow-md ${
                   selectedBooking?.id === booking.id ? 'border-orange-700 shadow-md' : 'border-gray-200'
                 }`}
@@ -269,12 +520,19 @@ export default function BookingsPage() {
 
                 <div className="border-t pt-6 space-y-3">
                   <h3 className="font-semibold text-gray-900 mb-3">Quick Actions</h3>
-                  <a
-                    href={`mailto:${selectedBooking.email}?subject=Re: ${selectedBooking.service} Consultation&body=Hi ${selectedBooking.name},%0D%0A%0D%0AThank you for booking a consultation with MC Smart Bytes.`}
+                  <button
+                    onClick={() => handleEdit(selectedBooking)}
                     className="block w-full text-center px-4 py-3 bg-orange-700 text-white rounded-lg hover:bg-orange-800 transition font-semibold"
                   >
+                    <i className="fas fa-edit mr-2"></i>
+                    Edit Booking
+                  </button>
+                  <a
+                    href={`mailto:${selectedBooking.email}?subject=Re: ${selectedBooking.service} Consultation&body=Hi ${selectedBooking.name},%0D%0A%0D%0AThank you for booking a consultation with MC Smart Bytes.`}
+                    className="block w-full text-center px-4 py-3 bg-white text-gray-700 border-2 border-gray-200 rounded-lg hover:bg-gray-50 transition font-semibold"
+                  >
                     <i className="fas fa-reply mr-2"></i>
-                    Send Confirmation Email
+                    Send Email
                   </a>
                   {selectedBooking.phone && (
                     <a
