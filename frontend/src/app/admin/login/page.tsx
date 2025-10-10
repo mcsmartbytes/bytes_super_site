@@ -1,7 +1,7 @@
 "use client";
 import { useState, FormEvent } from 'react';
 import { supabase } from '@/lib/supabase';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function AdminLogin() {
@@ -9,7 +9,6 @@ export default function AdminLogin() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const router = useRouter();
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
@@ -28,7 +27,8 @@ export default function AdminLogin() {
         // Force a hard redirect to ensure session is loaded
         window.location.href = '/admin';
       }
-    } catch (error: any) {
+    } catch (err) {
+      const error = err as Error;
       setError(error.message || 'Failed to login');
       setLoading(false);
     }
@@ -110,10 +110,10 @@ export default function AdminLogin() {
           </form>
 
           <div className="mt-6 text-center">
-            <a href="/" className="text-sm text-gray-600 hover:text-orange-600 transition">
+            <Link href="/" className="text-sm text-gray-600 hover:text-orange-600 transition">
               <i className="fas fa-arrow-left mr-2"></i>
               Back to Website
-            </a>
+            </Link>
           </div>
         </div>
 
