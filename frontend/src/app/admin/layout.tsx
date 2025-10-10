@@ -89,7 +89,9 @@ export default function AdminLayout({
   const navItems = [
     { href: '/admin', label: 'Dashboard', icon: 'fas fa-home' },
     { href: '/admin/inquiries', label: 'Inquiries', icon: 'fas fa-envelope' },
+    { href: '/admin/bookings', label: 'Bookings', icon: 'fas fa-calendar-check' },
     { href: '/admin/todos', label: 'Todos', icon: 'fas fa-tasks' },
+    { href: '/admin/blog', label: 'Blog', icon: 'fas fa-newspaper' },
     { href: '/', label: 'View Site', icon: 'fas fa-external-link-alt' },
   ];
 

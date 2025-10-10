@@ -163,7 +163,7 @@ export default function Home() {
             <ul className="hidden md:flex items-center gap-8">
               <li><Link href="#services" className="text-gray-700 hover:text-orange-700 transition font-medium">Services</Link></li>
               <li><Link href="#portfolio" className="text-gray-700 hover:text-orange-700 transition font-medium">Portfolio</Link></li>
-              <li><Link href="#testimonials" className="text-gray-700 hover:text-orange-700 transition font-medium">Testimonials</Link></li>
+              <li><Link href="/blog" className="text-gray-700 hover:text-orange-700 transition font-medium">Blog</Link></li>
               <li><Link href="#about" className="text-gray-700 hover:text-orange-700 transition font-medium">About</Link></li>
               <li><Link href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-semibold">Get Started</Link></li>
             </ul>
@@ -177,7 +177,7 @@ export default function Home() {
             <ul className="md:hidden mt-4 flex flex-col gap-4 pb-4">
               <li><Link href="#services" className="block text-gray-700 hover:text-orange-700 transition">Services</Link></li>
               <li><Link href="#portfolio" className="block text-gray-700 hover:text-orange-700 transition">Portfolio</Link></li>
-              <li><Link href="#testimonials" className="block text-gray-700 hover:text-orange-700 transition">Testimonials</Link></li>
+              <li><Link href="/blog" className="block text-gray-700 hover:text-orange-700 transition">Blog</Link></li>
               <li><Link href="#about" className="block text-gray-700 hover:text-orange-700 transition">About</Link></li>
               <li><Link href="#contact" className="block px-6 py-2.5 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl text-center">Get Started</Link></li>
             </ul>
@@ -221,11 +221,11 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link href="#contact" className="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-600/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold">
-              Get Free Business Analysis <i className="fas fa-arrow-right ml-2"></i>
+            <Link href="/book" className="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-600/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold">
+              Book Free Consultation <i className="fas fa-calendar-check ml-2"></i>
             </Link>
-            <Link href="#portfolio" className="px-8 py-4 bg-white text-stone-700 border-2 border-white rounded-xl hover:bg-gray-100 transition text-lg font-semibold">
-              View Success Stories
+            <Link href="#contact" className="px-8 py-4 bg-white text-stone-700 border-2 border-white rounded-xl hover:bg-gray-100 transition text-lg font-semibold">
+              Get Free Business Analysis
             </Link>
           </div>
 
