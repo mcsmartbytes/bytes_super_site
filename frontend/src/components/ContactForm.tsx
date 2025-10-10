@@ -107,7 +107,7 @@ export default function ContactForm() {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-800 focus:ring-2 focus:ring-blue-100 outline-none transition"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-blue-100 outline-none transition"
               placeholder="John Smith"
               disabled={status === 'submitting'}
             />
@@ -122,7 +122,7 @@ export default function ContactForm() {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-800 focus:ring-2 focus:ring-blue-100 outline-none transition"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-blue-100 outline-none transition"
               placeholder="john@company.com"
               disabled={status === 'submitting'}
             />
@@ -138,7 +138,7 @@ export default function ContactForm() {
             required
             value={formData.service}
             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-800 focus:ring-2 focus:ring-blue-100 outline-none transition"
+            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-blue-100 outline-none transition"
             disabled={status === 'submitting'}
           >
             <option>Bookkeeping Services</option>
@@ -159,7 +159,7 @@ export default function ContactForm() {
             rows={4}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-800 focus:ring-2 focus:ring-blue-100 outline-none transition resize-none"
+            className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-blue-100 outline-none transition resize-none"
             placeholder="Tell me about your needs..."
             disabled={status === 'submitting'}
           ></textarea>
@@ -168,7 +168,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full py-4 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === 'submitting' ? (
             <>
@@ -183,7 +183,7 @@ export default function ContactForm() {
         </button>
 
         <div className="text-center text-sm text-gray-600">
-          <i className="fas fa-lock text-blue-800 mr-2"></i>
+          <i className="fas fa-lock text-orange-700 mr-2"></i>
           Your information is secure and will never be shared
         </div>
       </form>

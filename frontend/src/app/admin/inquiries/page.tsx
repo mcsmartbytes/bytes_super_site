@@ -91,7 +91,7 @@ export default function InquiriesPage() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'new': return 'bg-green-100 text-green-700';
-      case 'read': return 'bg-blue-100 text-blue-700';
+      case 'read': return 'bg-blue-100 text-orange-600';
       case 'responded': return 'bg-gray-100 text-gray-700';
       default: return 'bg-gray-100 text-gray-700';
     }
@@ -120,7 +120,7 @@ export default function InquiriesPage() {
         </div>
         <button
           onClick={fetchInquiries}
-          className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition font-semibold"
+          className="px-4 py-2 bg-orange-700 text-white rounded-lg hover:bg-blue-900 transition font-semibold"
         >
           <i className="fas fa-sync-alt mr-2"></i>
           Refresh
@@ -132,7 +132,7 @@ export default function InquiriesPage() {
         <button
           onClick={() => setFilter('all')}
           className={`px-4 py-2 rounded-md font-medium transition ${
-            filter === 'all' ? 'bg-blue-800 text-white' : 'text-gray-600 hover:bg-gray-100'
+            filter === 'all' ? 'bg-orange-700 text-white' : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
           All ({inquiries.length})
@@ -140,7 +140,7 @@ export default function InquiriesPage() {
         <button
           onClick={() => setFilter('new')}
           className={`px-4 py-2 rounded-md font-medium transition ${
-            filter === 'new' ? 'bg-blue-800 text-white' : 'text-gray-600 hover:bg-gray-100'
+            filter === 'new' ? 'bg-orange-700 text-white' : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
           New ({inquiries.filter(i => i.status === 'new').length})
@@ -148,7 +148,7 @@ export default function InquiriesPage() {
         <button
           onClick={() => setFilter('read')}
           className={`px-4 py-2 rounded-md font-medium transition ${
-            filter === 'read' ? 'bg-blue-800 text-white' : 'text-gray-600 hover:bg-gray-100'
+            filter === 'read' ? 'bg-orange-700 text-white' : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
           Read ({inquiries.filter(i => i.status === 'read').length})
@@ -156,7 +156,7 @@ export default function InquiriesPage() {
         <button
           onClick={() => setFilter('responded')}
           className={`px-4 py-2 rounded-md font-medium transition ${
-            filter === 'responded' ? 'bg-blue-800 text-white' : 'text-gray-600 hover:bg-gray-100'
+            filter === 'responded' ? 'bg-orange-700 text-white' : 'text-gray-600 hover:bg-gray-100'
           }`}
         >
           Responded ({inquiries.filter(i => i.status === 'responded').length})
@@ -165,7 +165,7 @@ export default function InquiriesPage() {
 
       {loading ? (
         <div className="text-center py-12">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-800 border-t-transparent"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-700 border-t-transparent"></div>
           <p className="text-gray-600 mt-4">Loading inquiries...</p>
         </div>
       ) : filteredInquiries.length === 0 ? (
@@ -188,7 +188,7 @@ export default function InquiriesPage() {
                   }
                 }}
                 className={`bg-white rounded-lg p-4 border-2 cursor-pointer transition-all hover:shadow-md ${
-                  selectedInquiry?.id === inquiry.id ? 'border-blue-800 shadow-md' : 'border-gray-200'
+                  selectedInquiry?.id === inquiry.id ? 'border-orange-700 shadow-md' : 'border-gray-200'
                 }`}
               >
                 <div className="flex items-start justify-between mb-2">
@@ -255,7 +255,7 @@ export default function InquiriesPage() {
                   <h3 className="font-semibold text-gray-900 mb-3">Quick Actions</h3>
                   <a
                     href={`mailto:${selectedInquiry.email}?subject=Re: ${selectedInquiry.service}&body=Hi ${selectedInquiry.name},%0D%0A%0D%0AThank you for your inquiry about ${selectedInquiry.service}.`}
-                    className="block w-full text-center px-4 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition font-semibold"
+                    className="block w-full text-center px-4 py-3 bg-orange-700 text-white rounded-lg hover:bg-blue-900 transition font-semibold"
                   >
                     <i className="fas fa-reply mr-2"></i>
                     Reply via Email

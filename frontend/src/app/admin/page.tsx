@@ -53,7 +53,7 @@ export default function AdminDashboard() {
               <p className="text-sm text-gray-500 mt-2">Last 7 days</p>
             </div>
             <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-              <i className="fas fa-bell text-blue-800 text-xl"></i>
+              <i className="fas fa-bell text-orange-700 text-xl"></i>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function AdminDashboard() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         <div className="bg-white rounded-xl p-6 border border-gray-200">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            <i className="fas fa-bolt text-blue-800 mr-2"></i>
+            <i className="fas fa-bolt text-orange-700 mr-2"></i>
             Quick Actions
           </h2>
           <div className="space-y-3">
@@ -112,7 +112,7 @@ export default function AdminDashboard() {
             <Link href="/admin/services" className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <i className="fas fa-briefcase text-blue-800"></i>
+                  <i className="fas fa-briefcase text-orange-700"></i>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900">Manage Services</p>
@@ -140,7 +140,7 @@ export default function AdminDashboard() {
         {/* Recent Activity */}
         <div className="bg-white rounded-xl p-6 border border-gray-200">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            <i className="fas fa-clock text-blue-800 mr-2"></i>
+            <i className="fas fa-clock text-orange-700 mr-2"></i>
             Recent Activity
           </h2>
           <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function AdminDashboard() {
             </div>
 
             <div className="flex items-start gap-3 pb-4 border-b border-gray-100">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+              <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
               <div className="flex-1">
                 <p className="text-sm font-medium text-gray-900">New inquiry received</p>
                 <p className="text-xs text-gray-500 mt-1">From: sarah@company.com - Excel Solutions</p>
@@ -163,7 +163,7 @@ export default function AdminDashboard() {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-blue-700 rounded-full mt-2"></div>
+              <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
               <div className="flex-1">
                 <p className="text-sm font-medium text-gray-900">Service page updated</p>
                 <p className="text-xs text-gray-500 mt-1">Database Conversion pricing updated</p>
@@ -177,7 +177,7 @@ export default function AdminDashboard() {
       {/* Website Traffic Preview */}
       <div className="bg-white rounded-xl p-6 border border-gray-200">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          <i className="fas fa-chart-line text-blue-800 mr-2"></i>
+          <i className="fas fa-chart-line text-orange-700 mr-2"></i>
           Website Overview
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -194,7 +194,7 @@ export default function AdminDashboard() {
           <div className="text-center p-4 bg-gray-50 rounded-lg">
             <p className="text-sm font-medium text-gray-600">Conversion Rate</p>
             <p className="text-2xl font-bold text-gray-900 mt-2">4.2%</p>
-            <p className="text-xs text-blue-800 mt-1">-2% vs last week</p>
+            <p className="text-xs text-orange-700 mt-1">-2% vs last week</p>
           </div>
         </div>
       </div>

@@ -74,7 +74,7 @@ export default function AdminLayout({
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-800 border-t-transparent"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-orange-700 border-t-transparent"></div>
           <p className="text-gray-600 mt-4">Loading...</p>
         </div>
       </div>
@@ -89,6 +89,7 @@ export default function AdminLayout({
   const navItems = [
     { href: '/admin', label: 'Dashboard', icon: 'fas fa-home' },
     { href: '/admin/inquiries', label: 'Inquiries', icon: 'fas fa-envelope' },
+    { href: '/admin/todos', label: 'Todos', icon: 'fas fa-tasks' },
     { href: '/', label: 'View Site', icon: 'fas fa-external-link-alt' },
   ];
 
@@ -111,7 +112,7 @@ export default function AdminLayout({
               )}
               <button
                 onClick={handleLogout}
-                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-800 transition"
+                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-700 transition"
               >
                 <i className="fas fa-sign-out-alt mr-2"></i>
                 Logout
@@ -134,8 +135,8 @@ export default function AdminLayout({
                       href={item.href}
                       className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                         isActive
-                          ? 'bg-blue-50 text-blue-800 font-semibold'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-blue-800'
+                          ? 'bg-orange-50 text-orange-700 font-semibold'
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-orange-700'
                       }`}
                     >
                       <i className={`${item.icon} w-5 text-center`}></i>
