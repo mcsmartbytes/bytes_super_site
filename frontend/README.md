@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MC Smart Bytes - The Made Easy Suite
+
+Marketing website for MC Smart Bytes, showcasing the Made Easy software suite for contractors and small businesses.
+
+## Overview
+
+This site serves as the main marketing hub for:
+
+- **Expenses Made Easy** - AI-powered receipt scanning and mileage tracking
+- **Books Made Easy** - Full accounting software for small businesses
+- **SiteSense** - Job costing and time tracking for contractors
+
+## Features
+
+- Responsive design with modern animations
+- Product showcase with integrated app links
+- Freemium pricing model (Free, Pro $29/mo, Business $79/mo)
+- Done For You managed services page
+- Contact form with security verification
+- SEO optimized with sitemap and robots.txt
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx          # Homepage
+│   ├── services/         # Done For You services page
+│   ├── admin/            # Admin dashboard
+│   ├── globals.css       # Global styles & animations
+│   └── sitemap.ts        # SEO sitemap
+├── components/
+│   ├── Navigation.tsx    # Main navigation
+│   ├── AnimatedSection.tsx
+│   └── AnimatedCounter.tsx
+└── services/             # Backend services
+```
 
-## Learn More
+## App Links
 
-To learn more about Next.js, take a look at the following resources:
+- Expenses Made Easy: https://expenses-made-easy-opal.vercel.app
+- Books Made Easy: https://books-made-easy-app.vercel.app
+- SiteSense: https://sitesense-lilac.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site is deployed on Vercel and automatically deploys on push to the main branch.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Copyright 2024 MC Smart Bytes. All rights reserved.

@@ -9,13 +9,21 @@ export default function ClientsPage() {
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    company_name: string;
+    contact_name: string;
+    email: string;
+    phone: string;
+    industry: string;
+    plan: "FULL SERVICE" | "BASIC" | "PREMIUM";
+    monthly_fee: number;
+  }>({
     company_name: "",
     contact_name: "",
     email: "",
     phone: "",
     industry: "",
-    plan: "FULL SERVICE" as const,
+    plan: "FULL SERVICE",
     monthly_fee: 0,
   });
 

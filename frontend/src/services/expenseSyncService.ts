@@ -77,13 +77,8 @@ export async function createJournalEntryFromExpense(
       .limit(1);
 
     // Determine payment method account ID (cash vs credit card)
-    let paymentAccountId = mapping.credit_account_id;
-    let paymentAccountName = 'Cash';
-
-    if (expense.payment_method?.toLowerCase().includes('credit')) {
-      paymentAccountName = 'Credit Card';
-      // TODO: Configure separate credit card account in mappings
-    }
+    const paymentAccountId = mapping.credit_account_id;
+    // TODO: Configure separate credit card account in mappings for credit card payments
 
     // Step 4: Generate entry number
     // Get count of existing entries for this client to generate sequential number

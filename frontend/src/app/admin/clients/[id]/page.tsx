@@ -15,15 +15,24 @@ export default function ClientDetailPage() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    company_name: string;
+    contact_name: string;
+    email: string;
+    phone: string;
+    industry: string;
+    plan: "FULL SERVICE" | "BASIC" | "PREMIUM";
+    monthly_fee: number;
+    status: "active" | "inactive";
+  }>({
     company_name: "",
     contact_name: "",
     email: "",
     phone: "",
     industry: "",
-    plan: "FULL SERVICE" as const,
+    plan: "FULL SERVICE",
     monthly_fee: 0,
-    status: "active" as const,
+    status: "active",
   });
 
   useEffect(() => {
