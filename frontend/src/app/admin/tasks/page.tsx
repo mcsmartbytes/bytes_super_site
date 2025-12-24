@@ -17,9 +17,14 @@ export default function TasksPage() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [filterPriority, setFilterPriority] = useState<string>("ALL");
   const [filterStatus, setFilterStatus] = useState<string>("ALL");
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    text: string;
+    priority: "HIGH" | "MEDIUM" | "LOW";
+    client_id: string;
+    due_date: string;
+  }>({
     text: "",
-    priority: "MEDIUM" as const,
+    priority: "MEDIUM",
     client_id: "",
     due_date: "",
   });
