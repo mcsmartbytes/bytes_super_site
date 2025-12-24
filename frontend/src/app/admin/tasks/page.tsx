@@ -3,11 +3,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
-import { Task, Client } from "@/types/database";
+import { Task } from "@/types/database";
+
+type ClientOption = {
+  id: string;
+  company_name: string;
+};
 
 export default function TasksPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [clients, setClients] = useState<Client[]>([]);
+  const [clients, setClients] = useState<ClientOption[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
   const [filterPriority, setFilterPriority] = useState<string>("ALL");
