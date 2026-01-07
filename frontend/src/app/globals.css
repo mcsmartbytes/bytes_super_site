@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #E2E6EC;
   --foreground: #2c3e50;
 
   /* MC Smart Bytes Color Scheme - Brown/Tan & Orange */
@@ -37,10 +37,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html, body {
+  min-height: 100vh;
+}
+
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #E2E6EC 0%, #D1D8E0 50%, #C4CDD8 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Override any bg-gray-50 or bg-white on main containers */
+.min-h-screen {
+  background: transparent !important;
 }
 
 /* Smooth scrolling */
