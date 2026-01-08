@@ -211,14 +211,20 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/login"
+                  className="text-gray-700 hover:text-blue-800 transition font-medium"
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/signup"
                   className="px-6 py-2.5 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 font-semibold"
                 >
                   Start Free
-                </a>
+                </Link>
               </li>
             </ul>
 
@@ -271,15 +277,22 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/login"
+                  className="block text-gray-700 hover:text-blue-800 transition"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/signup"
                   className="block px-6 py-2.5 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-xl text-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Start Free
-                </a>
+                </Link>
               </li>
             </ul>
           )}
@@ -332,14 +345,12 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
-              href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/signup"
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:shadow-2xl hover:shadow-blue-700/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold"
             >
               Start Free <i className="fas fa-arrow-right ml-2"></i>
-            </a>
+            </Link>
             <Link
               href="#products"
               className="px-8 py-4 bg-white text-slate-700 border-2 border-white rounded-xl hover:bg-gray-100 transition text-lg font-semibold"
@@ -609,14 +620,12 @@ export default function Home() {
                   <span className="text-gray-700">Mobile app access</span>
                 </li>
               </ul>
-              <a
-                href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/signup"
                 className="block text-center border-2 border-blue-800 text-blue-800 px-6 py-3 rounded-xl hover:bg-blue-800 hover:text-white transition-all font-semibold"
               >
                 Start Free
-              </a>
+              </Link>
             </div>
 
             {/* Pro Tier */}
@@ -653,14 +662,12 @@ export default function Home() {
                   <span className="text-gray-700">Email support</span>
                 </li>
               </ul>
-              <a
-                href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/signup"
                 className="block text-center bg-gradient-to-r from-blue-700 to-blue-800 text-white px-6 py-3 rounded-xl hover:shadow-lg transition-all font-semibold"
               >
                 Start Free Trial
-              </a>
+              </Link>
             </div>
 
             {/* Business Tier */}
@@ -995,14 +1002,12 @@ export default function Home() {
                 <p className="text-blue-100 text-sm mb-4">
                   No credit card required. Start tracking expenses in minutes.
                 </p>
-                <a
-                  href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/signup"
                   className="inline-block px-6 py-2 bg-white text-blue-800 rounded-lg font-semibold hover:bg-blue-50 transition"
                 >
                   Get Started <i className="fas fa-arrow-right ml-1"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -1109,14 +1114,17 @@ export default function Home() {
               <h4 className="font-bold text-lg mb-4">Get Started</h4>
               <ul className="space-y-2 text-sm text-blue-100 mb-4">
                 <li>
-                  <a
-                    href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/signup"
                     className="hover:text-white transition"
                   >
                     Start Free Trial
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/login" className="hover:text-white transition">
+                    Login
+                  </Link>
                 </li>
                 <li>
                   <Link href="#contact" className="hover:text-white transition">

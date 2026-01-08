@@ -90,14 +90,18 @@ export default function Navigation() {
             >
               About
             </Link>
-            <a
-              href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/login"
+              className="text-gray-700 hover:text-[#D2691E] transition-colors font-medium"
+            >
+              Login
+            </Link>
+            <Link
+              href="/signup"
               className="bg-gradient-to-r from-[#20B2AA] to-[#3CB371] text-white px-6 py-2 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all font-semibold"
             >
               Get Started
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -182,15 +186,20 @@ export default function Navigation() {
             >
               About
             </Link>
-            <a
-              href="https://expenses-made-easy-opal.vercel.app/auth/signup"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/login"
+              className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Login
+            </Link>
+            <Link
+              href="/signup"
               className="block mx-3 my-2 text-center bg-gradient-to-r from-[#20B2AA] to-[#3CB371] text-white px-4 py-2 rounded-xl hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       )}
