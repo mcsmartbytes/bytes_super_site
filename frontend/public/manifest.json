@@ -1,0 +1,20 @@
+{
+  "name": "MC Smart Bytes",
+  "short_name": "MC Smart",
+  "description": "Business automation, bookkeeping, and consulting services. Transform your business with expert solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "id": "mc-smart-bytes-app",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
