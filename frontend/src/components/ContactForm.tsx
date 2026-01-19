@@ -6,7 +6,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'Bookkeeping Services',
+    service: 'Not sure yet',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -51,7 +51,7 @@ export default function ContactForm() {
 
       // Success!
       setStatus('success');
-      setFormData({ name: '', email: '', service: 'Bookkeeping Services', message: '' });
+      setFormData({ name: '', email: '', service: 'Not sure yet', message: '' });
 
       // Reset status after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
@@ -131,8 +131,8 @@ export default function ContactForm() {
 
         <div>
           <label className="flex items-center gap-2 font-semibold text-gray-700 mb-2">
-            <i className="fas fa-briefcase"></i>
-            Service Interested In *
+            <i className="fas fa-question-circle"></i>
+            What are you interested in? *
           </label>
           <select
             required
@@ -141,11 +141,10 @@ export default function ContactForm() {
             className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-700 focus:ring-2 focus:ring-blue-100 outline-none transition"
             disabled={status === 'submitting'}
           >
-            <option>Bookkeeping Services</option>
-            <option>Excel Solutions</option>
-            <option>Database Conversion</option>
-            <option>Custom Consulting</option>
-            <option>Not Sure - Need Consultation</option>
+            <option>Custom app</option>
+            <option>Website</option>
+            <option>Help cleaning up my books</option>
+            <option>Not sure yet</option>
           </select>
         </div>
 

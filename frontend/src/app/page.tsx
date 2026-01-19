@@ -307,56 +307,56 @@ export default function Home() {
         <div className="relative z-20 container mx-auto px-6 py-32">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-semibold mb-8 border border-white/30">
             <i className="fas fa-star text-yellow-400"></i>
-            <span>Built for Contractors & Trades</span>
+            <span>20+ Years Helping Small Businesses</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            <span className="text-white">The </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
+            Websites and simple apps that make your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Made Easy
+              small business easier to run
             </span>
-            <span className="text-white"> Suite</span>
-            <br />
-            <span className="text-white">for Your Business</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto">
-            Track expenses, manage your books, and run profitable jobs —{" "}
-            <strong>all in one connected platform</strong>.
+            Custom-built tools and bookkeeping-smart systems that cut paperwork,
+            reduce mistakes, and free up your time without complicated software.
           </p>
-          <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-            AI-powered receipt scanning, GPS mileage tracking, invoicing, and
-            job costing built for how contractors actually work.
+          <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
+            Backed by 20+ years cleaning up real small-business books, so what
+            you get actually matches how you work.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400">200+</div>
-              <div className="text-gray-200 text-sm">Contractors Using Made Easy</div>
+          {/* Value Bullets */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left">
+              <i className="fas fa-check-circle text-cyan-400 text-xl mt-0.5"></i>
+              <span className="text-gray-200">Eliminate double entry between spreadsheets, invoices, and your books</span>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400">$2M+</div>
-              <div className="text-gray-200 text-sm">Tracked & Managed</div>
+            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left">
+              <i className="fas fa-check-circle text-cyan-400 text-xl mt-0.5"></i>
+              <span className="text-gray-200">Turn messy receipts and job notes into clean, usable data</span>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400">15+hrs</div>
-              <div className="text-gray-200 text-sm">Saved Weekly</div>
+            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left">
+              <i className="fas fa-check-circle text-cyan-400 text-xl mt-0.5"></i>
+              <span className="text-gray-200">Get simple tools you actually understand and use every week</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Link
-              href="/signup"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:shadow-2xl hover:shadow-blue-700/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold"
+              href="/book"
+              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-700/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold"
             >
-              Start Free <i className="fas fa-arrow-right ml-2"></i>
+              Schedule a Free 20-Minute Call <i className="fas fa-calendar-alt ml-2"></i>
             </Link>
-            <Link
-              href="#products"
-              className="px-8 py-4 bg-white text-slate-700 border-2 border-white rounded-xl hover:bg-gray-100 transition text-lg font-semibold"
+          </div>
+          <div className="mb-8">
+            <a
+              href="#demo"
+              className="text-cyan-400 hover:text-cyan-300 transition font-medium underline underline-offset-4"
             >
-              See How It Works
-            </Link>
+              Watch a 2-Minute Demo <i className="fas fa-play-circle ml-1"></i>
+            </a>
           </div>
 
           <div className="flex gap-4 justify-center flex-wrap text-gray-200 text-xs">
@@ -364,16 +364,132 @@ export default function Home() {
               <i className="fas fa-check"></i> No Credit Card Required
             </span>
             <span className="flex items-center gap-1 bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-              <i className="fas fa-check"></i> Free Forever Tier
+              <i className="fas fa-check"></i> 200+ Businesses Supported
             </span>
             <span className="flex items-center gap-1 bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-              <i className="fas fa-check"></i> Cancel Anytime
+              <i className="fas fa-check"></i> Free Consultation
             </span>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-white text-2xl animate-bounce">
           <i className="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      {/* What I Build Strip */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What I Build</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all">
+              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 text-2xl">
+                <i className="fas fa-receipt"></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900">Expense Tools</h3>
+                <p className="text-sm text-gray-600">Receipt scanning & tracking</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all">
+              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 text-2xl">
+                <i className="fas fa-globe"></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900">Websites</h3>
+                <p className="text-sm text-gray-600">Professional business sites</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all">
+              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 text-2xl">
+                <i className="fas fa-cogs"></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900">Simple Apps</h3>
+                <p className="text-sm text-gray-600">Custom business tools</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Section */}
+      <section id="demo" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+              SEE IT IN ACTION
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              See how it works in 2 minutes
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Watch a quick walkthrough of how a simple tool can turn a messy process
+              into something you can do in minutes instead of hours.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            {/* Video Placeholder */}
+            <div className="relative">
+              <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center group cursor-pointer hover:shadow-3xl transition-all">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 group-hover:scale-110 transition-all">
+                    <i className="fas fa-play text-white text-3xl ml-1"></i>
+                  </div>
+                  <p className="text-white font-semibold">Watch Demo Video</p>
+                  <p className="text-gray-300 text-sm">2 minutes</p>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                Coming<br/>Soon!
+              </div>
+            </div>
+
+            {/* Demo Bullets */}
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 flex-shrink-0">
+                  <i className="fas fa-eye text-xl"></i>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">What you'll see</h4>
+                  <p className="text-gray-600">Snap a receipt, auto-capture the details, and send it to your books.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 flex-shrink-0">
+                  <i className="fas fa-clock text-xl"></i>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">Time it takes</h4>
+                  <p className="text-gray-600">Under 2 minutes from photo to ready-to-file expense.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 flex-shrink-0">
+                  <i className="fas fa-lightbulb text-xl"></i>
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-1">Why it matters</h4>
+                  <p className="text-gray-600">No more lost receipts, guessing at categories, or year-end panic.</p>
+                </div>
+              </div>
+
+              <Link
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-4"
+              >
+                Get a Tool Like This for Your Business
+                <i className="fas fa-arrow-right"></i>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -823,22 +939,39 @@ export default function Home() {
               ABOUT MC SMART BYTES
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Built by a Bookkeeper, For Contractors
+              Why MC Smart Bytes exists
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-7 gap-8">
             <div className="md:col-span-2 lg:col-span-4">
               <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white mb-8">
-                <h3 className="text-2xl font-bold mb-4">
-                  20+ Years Solving Contractor Problems
-                </h3>
-                <p className="text-blue-100 leading-relaxed">
-                  After 20+ years of doing books for contractors, I kept seeing
-                  the same problems: receipts stuffed in glove boxes, job costs
-                  discovered too late, and hours wasted on disconnected
-                  spreadsheets. So I built the Made Easy suite to solve these
-                  problems once and for all.
+                <p className="text-xl text-blue-100 leading-relaxed mb-6">
+                  For over 20 years, bookkeeping for contractors and small businesses
+                  has meant seeing the same problems over and over: great work in the
+                  field, chaos in the back office.
+                </p>
+                <ul className="space-y-3 text-blue-100">
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-times-circle text-red-400 mt-1"></i>
+                    <span>Receipts in shoe boxes, glove compartments, and random photos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-times-circle text-red-400 mt-1"></i>
+                    <span>Spreadsheets that only one person understands</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <i className="fas fa-times-circle text-red-400 mt-1"></i>
+                    <span>Invoicing and job costs that never match the bank or tax return</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 mb-8">
+                <p className="text-gray-800 leading-relaxed">
+                  <strong>MC Smart Bytes was started to fix that</strong> with small,
+                  focused tools and websites that plug directly into your real workflow,
+                  not a generic "one size fits all" system.
                 </p>
               </div>
 
@@ -896,17 +1029,26 @@ export default function Home() {
             </div>
 
             <div className="md:col-span-1 lg:col-span-3">
+              {/* Credibility Statement */}
+              <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white text-center mb-6">
+                <i className="fas fa-award text-4xl mb-3"></i>
+                <p className="text-lg font-semibold">
+                  Over 200+ contractors and small businesses supported with cleaner
+                  books, better tools, and more confident decisions.
+                </p>
+              </div>
+
               <div className="grid gap-6">
                 {[
                   {
                     number: "200+",
-                    label: "Contractors Served",
+                    label: "Businesses Supported",
                     desc: "Across trades and industries",
                   },
                   {
-                    number: "$2M+",
-                    label: "Tracked & Managed",
-                    desc: "In expenses and job costs",
+                    number: "20+",
+                    label: "Years Experience",
+                    desc: "In small business bookkeeping",
                   },
                   {
                     number: "98%",
