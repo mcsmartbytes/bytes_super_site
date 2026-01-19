@@ -300,75 +300,126 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-neutral-900/90 z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920')] bg-cover bg-center"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-16">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95 z-10"></div>
+        <div className="absolute inset-0 bg-[url('/tech-background.png')] bg-cover bg-center"></div>
 
-        <div className="relative z-20 container mx-auto px-6 py-32">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-semibold mb-8 border border-white/30">
-            <i className="fas fa-star text-yellow-400"></i>
-            <span>20+ Years Helping Small Businesses</span>
-          </div>
+        <div className="relative z-20 container mx-auto px-6 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                <span className="text-white">Websites & Apps That</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                  Power Small Business Success
+                </span>
+              </h1>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-white">
-            Websites and simple apps that make your{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              small business easier to run
-            </span>
-          </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">
+                We build custom digital tools that simplify your workflow and give you
+                time back — no bloated software or monthly fees.
+              </p>
 
-          <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto">
-            Custom-built tools and bookkeeping-smart systems that cut paperwork,
-            reduce mistakes, and free up your time without complicated software.
-          </p>
-          <p className="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-            Backed by 20+ years cleaning up real small-business books, so what
-            you get actually matches how you work.
-          </p>
-
-          {/* Value Bullets */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
-            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left">
-              <i className="fas fa-check-circle text-cyan-400 text-xl mt-0.5"></i>
-              <span className="text-gray-200">Eliminate double entry between spreadsheets, invoices, and your books</span>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  href="/signup"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-1 transition-all duration-300 text-lg font-bold inline-flex items-center justify-center gap-2"
+                >
+                  <i className="fas fa-rocket"></i>
+                  Get Started Free
+                </Link>
+              </div>
             </div>
-            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left">
-              <i className="fas fa-check-circle text-cyan-400 text-xl mt-0.5"></i>
-              <span className="text-gray-200">Turn messy receipts and job notes into clean, usable data</span>
-            </div>
-            <div className="flex items-start gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left">
-              <i className="fas fa-check-circle text-cyan-400 text-xl mt-0.5"></i>
-              <span className="text-gray-200">Get simple tools you actually understand and use every week</span>
-            </div>
-          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Link
-              href="/book"
-              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-700/50 hover:-translate-y-1 transition-all duration-300 text-lg font-bold"
-            >
-              Schedule a Free 20-Minute Call <i className="fas fa-calendar-alt ml-2"></i>
-            </Link>
-          </div>
-          <div className="mb-8">
-            <a
-              href="#demo"
-              className="text-cyan-400 hover:text-cyan-300 transition font-medium underline underline-offset-4"
-            >
-              Watch a 2-Minute Demo <i className="fas fa-play-circle ml-1"></i>
-            </a>
-          </div>
+            {/* Right side - Device Mockups */}
+            <div className="relative">
+              {/* Laptop Mockup */}
+              <div className="relative mx-auto max-w-lg">
+                <div className="bg-gray-800 rounded-t-xl p-2 border-t-4 border-gray-700">
+                  <div className="flex gap-1.5 mb-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  {/* Dashboard Screen */}
+                  <div className="bg-slate-900 rounded-lg p-4 aspect-[16/10]">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="text-cyan-400 font-bold text-sm">Dashboard</div>
+                      <div className="flex gap-2">
+                        <div className="w-8 h-2 bg-gray-700 rounded"></div>
+                        <div className="w-8 h-2 bg-gray-700 rounded"></div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-3 mb-4">
+                      <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg p-3 border border-cyan-500/30">
+                        <div className="text-xs text-gray-400">Revenue</div>
+                        <div className="text-lg font-bold text-white">$24,500</div>
+                        <div className="text-xs text-green-400">+12.5%</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg p-3 border border-purple-500/30">
+                        <div className="text-xs text-gray-400">Jobs</div>
+                        <div className="text-lg font-bold text-white">47</div>
+                        <div className="text-xs text-green-400">+8 new</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg p-3 border border-orange-500/30">
+                        <div className="text-xs text-gray-400">Pending</div>
+                        <div className="text-lg font-bold text-white">12</div>
+                        <div className="text-xs text-yellow-400">Action</div>
+                      </div>
+                    </div>
+                    <div className="bg-gray-800/50 rounded-lg p-3">
+                      <div className="flex justify-between text-xs text-gray-400 mb-2">
+                        <span>Monthly Overview</span>
+                        <span>Jan - Dec</span>
+                      </div>
+                      <div className="flex items-end gap-1 h-16">
+                        {[40, 65, 45, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h, i) => (
+                          <div key={i} className="flex-1 bg-gradient-to-t from-cyan-500 to-blue-500 rounded-t opacity-80" style={{height: `${h}%`}}></div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-700 h-4 rounded-b-xl"></div>
+                <div className="bg-gray-800 h-2 mx-16 rounded-b-lg"></div>
+              </div>
 
-          <div className="flex gap-4 justify-center flex-wrap text-gray-200 text-xs">
-            <span className="flex items-center gap-1 bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-              <i className="fas fa-check"></i> No Credit Card Required
-            </span>
-            <span className="flex items-center gap-1 bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-              <i className="fas fa-check"></i> 200+ Businesses Supported
-            </span>
-            <span className="flex items-center gap-1 bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-              <i className="fas fa-check"></i> Free Consultation
-            </span>
+              {/* Tablet Mockup - positioned to overlap */}
+              <div className="absolute -right-4 top-1/2 transform translate-y-[-30%] w-32 hidden md:block">
+                <div className="bg-gray-800 rounded-xl p-1.5 border-2 border-gray-700 shadow-2xl">
+                  <div className="bg-slate-900 rounded-lg p-2 aspect-[3/4]">
+                    <div className="text-cyan-400 font-bold text-[8px] mb-1">Invoices</div>
+                    <div className="space-y-1">
+                      {[1,2,3,4].map(i => (
+                        <div key={i} className="bg-gray-800 rounded p-1.5 flex justify-between items-center">
+                          <div className="w-8 h-1.5 bg-gray-600 rounded"></div>
+                          <div className="w-6 h-1.5 bg-green-500/50 rounded"></div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phone Mockup - positioned to overlap */}
+              <div className="absolute -left-4 bottom-0 transform translate-y-[20%] w-20 hidden md:block">
+                <div className="bg-gray-800 rounded-2xl p-1 border-2 border-gray-700 shadow-2xl">
+                  <div className="bg-slate-900 rounded-xl p-1.5 aspect-[9/16]">
+                    <div className="w-8 h-1 bg-gray-700 rounded-full mx-auto mb-1"></div>
+                    <div className="text-cyan-400 font-bold text-[6px] mb-1">Expenses</div>
+                    <div className="space-y-0.5">
+                      {[1,2,3].map(i => (
+                        <div key={i} className="bg-gray-800 rounded p-1">
+                          <div className="w-6 h-1 bg-gray-600 rounded mb-0.5"></div>
+                          <div className="w-4 h-1 bg-cyan-500/50 rounded"></div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -377,118 +428,135 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I Build Strip */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      {/* What We Build Section */}
+      <section id="what-we-build" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">What I Build</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Smart Tools for <span className="text-cyan-400">Real-World Business Problems</span>
+            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 text-2xl">
-                <i className="fas fa-receipt"></i>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                icon: "fas fa-desktop",
+                title: "Custom Websites",
+                description: "Designed to convert and built to scale with you"
+              },
+              {
+                icon: "fas fa-mobile-alt",
+                title: "Simple Business Apps",
+                description: "Automate tasks and streamline operations"
+              },
+              {
+                icon: "fas fa-chart-line",
+                title: "Dashboards & Reports",
+                description: "Real-time insights with zero tech hassle"
+              },
+              {
+                icon: "fas fa-link",
+                title: "Integrations",
+                description: "Connect your systems and eliminate double entry"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-300 group">
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
+                  <i className={item.icon}></i>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400">{item.description}</p>
               </div>
-              <div>
-                <h3 className="font-bold text-gray-900">Expense Tools</h3>
-                <p className="text-sm text-gray-600">Receipt scanning & tracking</p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 text-2xl">
-                <i className="fas fa-globe"></i>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900">Websites</h3>
-                <p className="text-sm text-gray-600">Professional business sites</p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-4 bg-gray-50 rounded-xl p-6 hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 text-2xl">
-                <i className="fas fa-cogs"></i>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900">Simple Apps</h3>
-                <p className="text-sm text-gray-600">Custom business tools</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Demo Section */}
-      <section id="demo" className="py-20 bg-gray-50">
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-20 bg-slate-800">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              SEE IT IN ACTION
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              See how it works in 2 minutes
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              From Idea to Impact in <span className="text-cyan-400">Just 3 Steps</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Watch a quick walkthrough of how a simple tool can turn a messy process
-              into something you can do in minutes instead of hours.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-            {/* Video Placeholder */}
-            <div className="relative">
-              <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center group cursor-pointer hover:shadow-3xl transition-all">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20"></div>
-                <div className="relative z-10 text-center">
-                  <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 group-hover:scale-110 transition-all">
-                    <i className="fas fa-play text-white text-3xl ml-1"></i>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                step: "1",
+                title: "Book a Free Call",
+                description: "We learn about your business goals and bottlenecks.",
+                icon: "fas fa-phone-alt"
+              },
+              {
+                step: "2",
+                title: "Build Your Tool",
+                description: "We design and deliver a custom app or website tailored to your needs.",
+                icon: "fas fa-tools"
+              },
+              {
+                step: "3",
+                title: "Launch & Support",
+                description: "You go live — and we stick around to support and improve over time.",
+                icon: "fas fa-rocket"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="relative">
+                <div className="bg-gradient-to-br from-slate-700 to-slate-800 border border-slate-600 rounded-2xl p-8 text-center hover:border-cyan-500/50 transition-all">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    {item.step}
                   </div>
-                  <p className="text-white font-semibold">Watch Demo Video</p>
-                  <p className="text-gray-300 text-sm">2 minutes</p>
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-400 text-2xl mx-auto mb-4 mt-4">
+                    <i className={item.icon}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-400">{item.description}</p>
                 </div>
+                {idx < 2 && (
+                  <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-cyan-500/50 text-2xl">
+                    <i className="fas fa-chevron-right"></i>
+                  </div>
+                )}
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
-                Coming<br/>Soon!
-              </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Demo Bullets */}
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 flex-shrink-0">
-                  <i className="fas fa-eye text-xl"></i>
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">What you'll see</h4>
-                  <p className="text-gray-600">Snap a receipt, auto-capture the details, and send it to your books.</p>
-                </div>
-              </div>
+          <div className="text-center mt-12">
+            <Link
+              href="/book"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-1 transition-all duration-300"
+            >
+              <i className="fas fa-calendar-alt"></i>
+              Book Your Free Call
+            </Link>
+          </div>
+        </div>
+      </section>
 
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 flex-shrink-0">
-                  <i className="fas fa-clock text-xl"></i>
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Time it takes</h4>
-                  <p className="text-gray-600">Under 2 minutes from photo to ready-to-file expense.</p>
-                </div>
-              </div>
+      {/* Showcase Section */}
+      <section id="showcase" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              A Few Tools We've Built for <span className="text-cyan-400">Small Businesses</span>
+            </h2>
+          </div>
 
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-800 flex-shrink-0">
-                  <i className="fas fa-lightbulb text-xl"></i>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              { name: "Job Tracker", icon: "fas fa-tasks", color: "from-blue-500 to-blue-600" },
+              { name: "Appointment Booker", icon: "fas fa-calendar-check", color: "from-green-500 to-emerald-600" },
+              { name: "Custom CRM", icon: "fas fa-users", color: "from-purple-500 to-violet-600" },
+              { name: "Invoice Portal", icon: "fas fa-file-invoice-dollar", color: "from-orange-500 to-amber-600" }
+            ].map((tool, idx) => (
+              <div key={idx} className="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 text-center hover:border-cyan-500/50 hover:bg-slate-800 transition-all group">
+                <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <i className={tool.icon}></i>
                 </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Why it matters</h4>
-                  <p className="text-gray-600">No more lost receipts, guessing at categories, or year-end panic.</p>
-                </div>
+                <h3 className="text-lg font-bold text-white">{tool.name}</h3>
               </div>
-
-              <Link
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-4"
-              >
-                Get a Tool Like This for Your Business
-                <i className="fas fa-arrow-right"></i>
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -844,48 +912,41 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-gray-50">
+      <section id="testimonials" className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="inline-block bg-gradient-to-r from-blue-700 to-blue-800 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              TESTIMONIALS
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              What Contractors Say
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our <span className="text-cyan-400">Clients Are Saying</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from contractors who use
-              the Made Easy suite every day
-            </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+            <div className="relative bg-gradient-to-br from-slate-800 to-slate-800/50 border border-slate-700 rounded-2xl p-8 md:p-12">
               {testimonials.map((testimonial, idx) => (
                 <div
                   key={idx}
                   className={`${activeTestimonial === idx ? "block" : "hidden"}`}
                 >
-                  <div className="text-5xl text-blue-800 mb-6">
+                  <div className="text-5xl text-cyan-400 mb-6">
                     <i className="fas fa-quote-left"></i>
                   </div>
 
-                  <p className="text-xl text-gray-800 italic leading-relaxed mb-8">
+                  <p className="text-xl text-gray-300 italic leading-relaxed mb-8">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
 
                   <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                      <h5 className="text-lg font-bold text-gray-900">
+                      <h5 className="text-lg font-bold text-white">
                         {testimonial.author}
                       </h5>
-                      <div className="text-blue-800 font-semibold">
+                      <div className="text-cyan-400 font-semibold">
                         {testimonial.title}
                       </div>
-                      <div className="text-gray-600 text-sm">
+                      <div className="text-gray-400 text-sm">
                         {testimonial.company}
                       </div>
-                      <div className="text-yellow-500 text-lg mt-2">
+                      <div className="text-yellow-400 text-lg mt-2">
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -898,12 +959,12 @@ export default function Home() {
                       {testimonial.results.map((result, rIdx) => (
                         <div
                           key={rIdx}
-                          className="text-center bg-gray-50 px-4 py-3 rounded-xl min-w-[120px]"
+                          className="text-center bg-slate-700/50 px-4 py-3 rounded-xl min-w-[120px] border border-slate-600"
                         >
-                          <div className="text-2xl font-bold text-blue-800">
+                          <div className="text-2xl font-bold text-cyan-400">
                             {result.number}
                           </div>
-                          <div className="text-xs text-gray-600">
+                          <div className="text-xs text-gray-400">
                             {result.label}
                           </div>
                         </div>
@@ -920,8 +981,8 @@ export default function Home() {
                     onClick={() => setActiveTestimonial(idx)}
                     className={`w-3 h-3 rounded-full transition-all ${
                       activeTestimonial === idx
-                        ? "bg-blue-800 w-8"
-                        : "bg-gray-300"
+                        ? "bg-cyan-400 w-8"
+                        : "bg-slate-600"
                     }`}
                   />
                 ))}
